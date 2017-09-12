@@ -1,0 +1,11 @@
+#决策树来解决二分类问题
+
+from sklearn import tree
+X = [[0,0], [1,1]]
+Y = [0,1]
+clf = tree.DecisionTreeClassifier()
+clf = clf.fit(X, Y)                       #拟合X，Y
+pre = clf.predict([[2,2]])                #给定X预测其Y值
+print(pre)
+pro = clf.predict_proba([[2,2]])          #计算[2,2]分别属于0类的概率和属于1类的概率
+print(pro)
